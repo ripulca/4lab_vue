@@ -92,14 +92,12 @@
 </template>
 
 <script>
-// import appResume from './components/appResume.vue'
 import resumeInput from './components/resumeInput.vue'
 import resumeSelect from './components/resumeSelect.vue'
 
 export default {
   name: 'App',
   components: {
-    // appResume,
     resumeSelect,
     resumeInput,
   },
@@ -127,16 +125,6 @@ export default {
       feedback_2: "",
       feedback_3: "",
     }
-  },
-  watch: {
-    photo: function (newphoto, oldphoto) {
-      //обработчик смены фото
-      if (!newphoto) {
-        this.photo = oldphoto;
-      } else {
-        this.photo = newphoto;
-      }
-    },
   },
 }
 </script>
