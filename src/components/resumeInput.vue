@@ -2,7 +2,7 @@
     <div class="input">
         <span>{{ label }}</span>
         <br>
-        <input type="span" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)">
+        <input :type="type_inp" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)">
         <div v-if="!valid && error_message">
             <span class="error-message">{{ error_message }}</span>
         </div>
@@ -16,6 +16,10 @@ export default {
         modelValue: String,
         label: String,
         error_message: String,
+        type_inp:{
+            type:String,
+            default: "span"
+        },
         regex: {
             type: String,
             default: ""
